@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
-import { registerUser } from "../action/auth/registerUser";
 import Link from "next/link";
 import LoginForm from "./component/LoginForm";
+import SosalLogin from "./component/SosalLogin";
 
 export default function Login() {
 
@@ -30,13 +29,9 @@ export default function Login() {
 
                     <p className="text-center text-gray-500 mt-4">Or Login Up with</p>
 
-                    {/* Social Icons */}
-                    <div className="flex justify-center space-x-6 mt-3">
-                        <FaFacebook className="text-2xl text-gray-600 cursor-pointer hover:text-blue-600" />
-                        <FaLinkedin className="text-2xl text-gray-600 cursor-pointer hover:text-blue-700" />
-                        <FaGoogle className="text-2xl text-gray-600 cursor-pointer hover:text-red-500" />
-                    </div>
-
+                    {/* Social Login */}
+                    <SosalLogin></SosalLogin>
+                    
                     <p className="text-center mt-5 text-gray-600">
                         Already have an account?{" "}
                         <Link href="/login" className="text-red-500 font-semibold">

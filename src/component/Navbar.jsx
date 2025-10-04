@@ -8,6 +8,7 @@ export default function Navbar() {
     const session = useSession()
     const {status,data}=session
     console.log(session)
+    if(status=="loading") return 
     const navMenu=<>
     
    <li> <Link href={'/'}>Home</Link></li>
