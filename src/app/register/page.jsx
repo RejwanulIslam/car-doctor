@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { FaFacebook, FaLinkedin, FaGoogle } from "react-icons/fa";
 import { registerUser } from "../action/auth/registerUser";
+import Link from "next/link";
 
 export default function SignUp() {
     const handleSubmit=async(e)=>{
@@ -81,9 +82,9 @@ export default function SignUp() {
 
                     <p className="text-center mt-5 text-gray-600">
                         Already have an account?{" "}
-                        <a href="/login" className="text-red-500 font-semibold">
+                        <Link href="/login" className="text-red-500 font-semibold">
                             Login
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
