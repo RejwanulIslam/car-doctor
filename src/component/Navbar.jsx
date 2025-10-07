@@ -16,6 +16,7 @@ export default function Navbar() {
    <li> <Link href={'/services'}>Services</Link></li>
    <li> <Link href={'/blog'}>Blog</Link></li>
    <li> <Link href={'/Content'}>Content</Link></li>
+   <li> <Link href={'/my_bookings'}>My Booking</Link></li>
   
     
     </>
