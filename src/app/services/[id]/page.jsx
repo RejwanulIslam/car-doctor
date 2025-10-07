@@ -1,6 +1,7 @@
 import dbConnect from '@/lib/dbConnect'
 import { ObjectId } from 'mongodb'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export default async function ServicesDelels({ params }) {
@@ -55,9 +56,9 @@ export default async function ServicesDelels({ params }) {
             <div className="text-2xl font-bold text-indigo-600">
               ${data.price}
             </div>
-            <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg font-medium transition-all">
+            <Link href={`/checkOut/${data._id}`} className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-lg font-medium transition-all">
               CheckOut
-            </button>
+            </Link>
           </div>
         </div>
       </div>
