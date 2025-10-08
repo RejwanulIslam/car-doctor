@@ -19,7 +19,7 @@ export default function CheckOutForm({ data }) {
     const service_name = data?.title
     const service_img = data?.img
     const paylod = { name, email, phone_number, service_name, service_img, date, due_amount, present_address, service_id }
-    const res = await fetch("http://localhost:3000/api/service", {
+    const res = await fetch("https://next-js-car-doctor-eight.vercel.app/api/service", {
       method: "POST",
       body: JSON.stringify(paylod)
     })

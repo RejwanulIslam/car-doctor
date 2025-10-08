@@ -1,8 +1,8 @@
 import { headers } from "next/headers"
 import Booking from "./component/Booking"
 const fetchMyBooking = async () => {
-    const res = await fetch('http://localhost:3000/api/service', {
-        headers: await headers()
+    const res = await fetch('https://next-js-car-doctor-eight.vercel.app/api/service', {
+        headers:new Headers(await headers())
 
     })
 

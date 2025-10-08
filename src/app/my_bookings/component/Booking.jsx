@@ -54,7 +54,7 @@ export default function Booking({ data }) {
               <p className="text-sm text-gray-500">
                 {item.date || "No Date"}
               </p>
-              <Link href={`http://localhost:3000/my_bookings/${item?._id}`} className=" btn bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
+              <Link href={`https://next-js-car-doctor-eight.vercel.app/my_bookings/${item?._id}`} className=" btn bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
                 Update
               </Link>
             </div>

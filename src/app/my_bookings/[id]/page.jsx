@@ -4,8 +4,8 @@ import { headers } from 'next/headers'
 
 export default async function UpdateBooking({ params }) {
   const p = await params
-  const res = await fetch(`http://localhost:3000/api/my_booking/${p.id}`, {
-    headers: await headers()
+  const res = await fetch(`https://next-js-car-doctor-eight.vercel.app/api/my_booking/${p.id}`, {
+    headers: new Headers(await headers())
   })
   const data = await res.json()
   console.log(data)

@@ -14,7 +14,7 @@ export default function UpdateBookingForm({ data }) {
         const phone_number = form.phone_number.value
         const present_address = form.present_address.value
         const paylod = { phone_number, date, present_address, }
-        const res = await fetch(`http://localhost:3000/api/my_booking/${data?._id}`, {
+        const res = await fetch(`https://next-js-car-doctor-eight.vercel.app/api/my_booking/${data?._id}`, {
             method: "PATCH",
             body: JSON.stringify(paylod)
         })

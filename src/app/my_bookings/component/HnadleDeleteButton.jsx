@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 export default function HnadleDeleteButton({ id }) {
     const router=useRouter()
     const handleDlete = async(id) => {
-        const res=await fetch(`http://localhost:3000/api/service/${id}`,{
+        const res=await fetch(`https://next-js-car-doctor-eight.vercel.app/api/service/${id}`,{
             method:"DELETE"
         })
         const result=await res.json()
