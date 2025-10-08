@@ -1,9 +1,10 @@
 import { Trash2 } from 'lucide-react'
 import React from 'react'
 import HnadleDeleteButton from './HnadleDeleteButton'
+import Link from 'next/link'
 
 export default function Booking({ data }) {
-
+ 
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
       {/* Header Section */}
@@ -53,9 +54,9 @@ export default function Booking({ data }) {
               <p className="text-sm text-gray-500">
                 {item.date || "No Date"}
               </p>
-              <span className="bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
-                Pending
-              </span>
+              <Link href={`http://localhost:3000/my_bookings/${item?._id}`} className=" btn bg-orange-500 text-white px-3 py-1 rounded-lg text-sm font-medium">
+                Update
+              </Link>
             </div>
           </div>
         ))}
